@@ -1,0 +1,148 @@
+body {
+    background-color: #f3f5fc;
+}
+
+header {
+    float: left;
+    height: 100vh;
+    width: 10%;
+}
+
+header img {
+    margin: 20%;
+}
+
+main {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 40px;
+    height: 100vh;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+.input {
+    height: 90%;
+    width: 60%;
+    padding: 40px 0 5px 0;
+    background-color: #f3f5fc;
+    box-sizing: border-box;
+}
+
+.input textarea {
+    background-color: #f3f5fc;
+    border: none;
+    width: 100%;
+    outline: none;
+    height: 95%;
+    resize: none;
+    box-sizing: border-box;
+    font-family: "Inter";
+    font-size: 32px;
+    color: #0a3871;
+}
+
+.input p {
+    color: #495057;
+    font-size: 12px;
+}
+
+.input textarea::placeholder {
+    font-weight: 400;
+    color: #0a3871;
+}
+
+.botones {
+    display: flex;
+    width: 60%;
+    height: 10%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.botones button {
+    width: 45%;
+    height: 80%;
+    border: 1px solid #0a3871;
+    border-radius: 24px;
+    background-color: #d8dfe8;
+    color: #0a3871;
+    box-sizing: border-box;
+}
+
+.botones button:hover {
+    background-color: #0a3871;
+    color: #ffffff;
+}
+
+.resultado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33%;
+    height: 100%;
+    padding: 20px;
+    margin-left: 60px;
+    box-sizing: border-box;
+    border-radius: 32px;
+    background-color: #ffffff;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.resultado .contenido {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contenido strong {
+    font-family: "Inter";
+    font-weight: bold;
+    font-size: 24px;
+    color: #343a40;
+}
+
+.contenido p {
+    font-family: "Inter";
+    font-size: 16px;
+    color: #495057;
+}
+
+footer {
+    text-align: center;
+    background-color: #0a3871;
+    color: #ffffff;
+}
+
+footer p {
+    display: block;
+    font-family: "Ink free";
+    font-weight: bold;
+    font-size: 24px;
+    padding: 15px 0 0 0;
+}
+
+footer hr {
+    width: 50%;
+    padding: 0;
+    border: none;
+    border-top: medium double #ffffff;
+    color: #ffffff;
+    text-align: center;
+}
+
+footer .redes-sociales {
+    display: flex;
+    justify-content: center;
+    height: 80px;
+}
+
+.redes-sociales a {
+    color: #ffffff;
+    display: inline-block;
+    padding: 4px;
+    margin: 8px;
+    height: 35px;
+    font-size: 35px;
+}
