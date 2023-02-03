@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="css/reset.css">
         <link href="css/style.css" rel="stylesheet">
         <script src="https://kit.fontawesome.com/0031fcdede.js" crossorigin="anonymous"></script>
+        <script src="Js/Encriptador.js"></script>
     </head>
 
     <body>
@@ -16,28 +17,28 @@
         </header>
 
         <main>
-            <div class="input">
-                <textarea cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="section-input">
+                <textarea id="input" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
                 <p>
                     <i class="fas fa-exclamation-circle"></i> Solo letras
                     minusculas y sin acentos
                 </p>
             </div>
 
-            <div class="botones">
-                <button type="button">Encriptar</button>
-                <button type="button">Desencriptar</button>
+            <div class="section-botones">
+                <button class="botones" type="button" onclick="Encriptar()" >Encriptar</button>
+                <button class="botones" type="button" onclick="Desencriptar() ">Desencriptar</button>
             </div>
 
             <div class="resultado">
-                <div class="contenido">
+                <div class="section-contenido">
                     <img src="img/Muñeco.png" alt="Muñeco buscando algo ">
                     <br>
-                    <p>
-                        <strong>Ningún mensaje fue encontrado.</strong> <br>
+                    <div id="contenido">
+                        <p><strong>Ningún mensaje fue encontrado.</strong> <br></p>
                         <br>
-                        Ingresa el texto que deseas encriptar o desencriptar
-                    </p>
+                        <p>Ingresa el texto que deseas encriptar o desencriptar</p> 
+                    </div>
                 </div>
             </div>
         </main>

@@ -34,14 +34,14 @@ main {
 }
 
 /* Estilos para la sección de entrada */
-.input {
+.section-input {
     height: 90%;
     width: 60%;
     padding: 40px 0 5px 0;
     background-color: #f3f5fc;
 }
 
-.input textarea {
+.section-input #input {
     background-color: #f3f5fc;
     border: none;
     width: 100%;
@@ -52,18 +52,18 @@ main {
     color: #0a3871;
 }
 
-.input p {
+.section-input p {
     color: #495057;
     font-size: 12px;
 }
 
-.input textarea::placeholder {
+.section-input #input::placeholder {
     font-weight: 400;
     color: #0a3871;
 }
 
-/* Estilos para la sección de botones */
-.botones {
+/* Estilos para la sección de section-botones */
+.section-botones {
     display: flex;
     width: 60%;
     height: 10%;
@@ -71,7 +71,7 @@ main {
     justify-content: space-around;
 }
 
-.botones button {
+.botones {
     width: 45%;
     height: 80%;
     border: 1px solid #0a3871;
@@ -80,7 +80,7 @@ main {
     color: #0a3871;
 }
 
-.botones button:hover {
+.botones:hover {
     background-color: #0a3871;
     color: #ffffff;
 }
@@ -99,22 +99,25 @@ main {
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
 }
 
-.resultado .contenido {
+.resultado .section-contenido {
     width: 100%;
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-.contenido strong {
-    font-weight: bold;
+.section-contenido {
     font-size: 24px;
+    color: #495057;
+}
+
+.section-contenido strong {
+    font-weight: bold;
     color: #343a40;
 }
 
-.contenido p {
+#contenido p:last-child {
     font-size: 16px;
-    color: #495057;
 }
 
 /* Estilos para el pie de página */
@@ -179,13 +182,13 @@ footer .redes-sociales {
         width: 100%;
     }
 
-    .input {
+    .section-input {
         width: 100%;
         height: 50%;
         padding: 20px;
     }
 
-    .botones {
+    .section-botones {
         width: 100%;
     }
 
@@ -195,34 +198,34 @@ footer .redes-sociales {
         margin: 0;
     }
 
-    .resultado .contenido {
+    .resultado .section-contenido {
         height: 100%;
     }
 
-    .contenido img {
+    .section-contenido img {
         display: none;
     }
 }
 
 /* Estilos específicos para celulares */
 @media only screen and (max-width: 600px) {
-    .input textarea {
+    .section-input #input {
         font-size: 20px;
     }
 
-    .input p {
+    .section-input p {
         font-size: 8px;
     }
 
-    .botones button {
+    .botones {
         font-size: 12px;
     }
 
-    .contenido strong {
+    .section-contenido p {
         font-size: 20px;
     }
 
-    .contenido p {
+    #contenido p:last-child {
         font-size: 12px;
     }
 
