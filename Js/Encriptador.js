@@ -1,3 +1,5 @@
+var texto;
+
 function Comprobar(texto) {
     var acentos = /[À-ÿ]/;
     var mayusculas = /[A-Z]/;
@@ -5,55 +7,25 @@ function Comprobar(texto) {
 }
 
 function Encriptar() {
-    var texto = document.getElementById("input").value;
+    texto = document.getElementById("input").value;
     if (Comprobar(texto) === false) {
         var textoEncriptado = "";
+        var encriptacion = {
+            a: "ai",
+            e: "enter",
+            i: "imes",
+            o: "ober",
+            u: "ufat",
+        };
 
         for (let i = 0; i < texto.length; i++) {
-            switch (texto[i]) {
-                case "a":
-                    textoEncriptado += "ai";
-                    break;
-
-                case "e":
-                    textoEncriptado += "enter";
-
-                    break;
-
-                case "i":
-                    textoEncriptado += "imes";
-
-                    break;
-
-                case "o":
-                    textoEncriptado += "ober";
-
-                    break;
-
-                case "u":
-                    textoEncriptado += "ufat";
-
-                    break;
-
-                default:
-                    textoEncriptado += texto[i];
-
-                    break;
-            }
+            textoEncriptado += encriptacion[texto[i]] || texto[i];
         }
 
-        document.getElementById("contenido").innerHTML =
-            "<p id = 'textoSolucionado'>" + textoEncriptado + "</p>";
-        document.getElementById("contenido").innerHTML += "<br> <br>";
-        document.getElementById("contenido").innerHTML +=
-            "<button class='botones' onclick='Copiar()' style='height: 40%;' >Copiar</button>";
+        mostrarTexto(textoEncriptado);
     } else {
-        document.getElementById("contenido").innerHTML =
-            "Solo letras minusculas y sin acentos";
+        mostrarMensaje("Solo letras minusculas y sin acentos");
     }
-    document
-        .getElementsByClassName("section-contenido")[0]
-        .querySelector("img").style.display = "none";
 }
 
 function Desencriptar() {
@@ -129,18 +101,22 @@ function Desencriptar() {
                     break;
             }
         }
-        document.getElementById("contenido").innerHTML =
-            "<p id = 'textoSolucionado'>" + textoDesencriptado + "</p>";
-        document.getElementById("contenido").innerHTML += "<br> <br>";
-        document.getElementById("contenido").innerHTML +=
-            "<button class='botones' onclick='Copiar()' style='height: 40%;' >Copiar</button>";
+        mostrarTexto(textoDesencriptado);
     } else {
-        document.getElementById("contenido").innerHTML =
-            "Solo letras minusculas y sin acentos";
+        mostrarMensaje("Solo letras minusculas y sin acentos");
     }
-    document
-        .getElementsByClassName("section-contenido")[0]
-        .querySelector("img").style.display = "none";
+}
+
+function mostrarTexto(textoEncriptado) {
+    document.getElementById("contenido").innerHTML =
+        "<p id = 'textoSolucionado'>" + textoEncriptado + "</p>";
+    document.getElementById("contenido").innerHTML += "<br> <br>";
+    document.getElementById("contenido").innerHTML +=
+        "<button class='botones' onclick='Copiar()' style='height: 40%;' >Copiar</button>";
+}
+
+function mostrarMensaje(mensaje) {
+    document.getElementById("contenido").innerHTML = mensaje;
 }
 
 function Copiar() {
